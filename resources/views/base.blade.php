@@ -280,7 +280,12 @@
                                 </li>
                                 <li>
                                     <button type="button" class="login-btn" data-toggle="modal" data-target="#myModal">
-                                        <i class="flaticon-profile"></i>Login
+                                        <i class="flaticon-profile"></i>  @guest()
+                                          Login
+                                                                              @endguest
+                                        @auth()
+                                            Logout
+                                          @endauth
                                     </button>
                                 </li>
                                 <li>
@@ -443,17 +448,22 @@
 </div>
 <!-- Search Box End Here -->
 <!-- Modal Start-->
+@guest
+
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+
                 <div class="title-default-bold mb-none">Login</div>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-                <form class="login-form">
-                    <input class="main-input-box" type="text" placeholder="User Name" />
-                    <input class="main-input-box" type="password" placeholder="Password" />
+                <form class="login-form" method="POST" action="{{ route('login')}}">
+                    @csrf
+                    <input id="username" type="text" class="main-input-box">
+
+                        <input id="password" type="password" class="main-input-box">
                     <div class="inline-box mb-5 mt-4">
                         <div class="checkbox checkbox-primary">
                             <input id="modal-checkbox" type="checkbox">
@@ -465,16 +475,39 @@
                         <button class="btn-fill" type="submit" value="Login">Login</button>
                         <a href="#" class="btn-register"><i class="fas fa-user"></i>Register Here!</a>
                     </div>
+                    @endguest
+                    @auth()
+                    <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                        <div class="title-default-bold mb-none">Logout</div>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form class="login-form" id="logout-form" action="{{ route('logout') }}" method="POST">
+                    @csrf
+
+
+
+                    <div class="inline-box mb-5 mt-4">
+                        <button class="btn-fill" type="submit" value="Logout">Logout</button>
+
+                    </div>
+
+
                 </form>
-                <label>Login connect with your Social Network</label>
-                <div class="login-box-social">
-                    <ul>
-                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#" class="google"><i class="fab fa-google-plus-g"></i></a></li>
-                    </ul>
-                </div>
+
+                @endauth
+{{--                <label>Login connect with your Social Network</label>--}}
+{{--                <div class="login-box-social">--}}
+{{--                    <ul>--}}
+{{--                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>--}}
+{{--                        <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>--}}
+{{--                        <li><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>--}}
+{{--                        <li><a href="#" class="google"><i class="fab fa-google-plus-g"></i></a></li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
             </div>
         </div>
     </div>

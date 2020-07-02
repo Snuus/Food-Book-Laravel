@@ -8,25 +8,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-/**
- * Class User
- * 
- * @property int $id
- * @property string $username
- * @property string $password
- * @property string $first_name
- * @property string $last_name
- * @property string $email
- * @property int $role_id
- * 
- * @property Role $role
- * @property Collection|Recipe[] $recipes
- *
- * @package App\Models
- */
-class User extends Model
+
+
+
+class User extends Authenticatable
+
 {
+    use Notifiable;
+
 	protected $table = 'user';
 	public $timestamps = false;
 
@@ -35,7 +28,7 @@ class User extends Model
 	];
 
 	protected $hidden = [
-		'password'
+        'password', 'remember_token'
 	];
 
 	protected $fillable = [
@@ -44,7 +37,6 @@ class User extends Model
 		'first_name',
 		'last_name',
 		'email',
-		'role_id'
 	];
 
 	public function role()

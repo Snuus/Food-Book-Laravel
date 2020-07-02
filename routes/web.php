@@ -28,3 +28,8 @@ Route::get('/category', function () {
 
 Route::get('/recipes-by-category/{categoryid}', 'RecipeController@show');
 Route::get('/single-recipe/{recipeid}', 'RecipeController@singleRecipe');
+
+Auth::routes();
+
+
+Route::get('/', 'HomeController@show')->name('home');

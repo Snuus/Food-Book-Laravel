@@ -34,7 +34,7 @@ class Recipe extends Model
 	protected $casts = [
 		'user_id' => 'int',
 		'category_id' => 'int',
-		'public' => 'bool'
+       // 'public' => 'bool'
 	];
 
 	protected $fillable = [
@@ -42,7 +42,7 @@ class Recipe extends Model
 		'body',
 		'user_id',
 		'category_id',
-		'public'
+	//	'public'
 	];
 
 

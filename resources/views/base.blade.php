@@ -2,6 +2,7 @@
 <html class="no-js" lang="">
 
 <head>
+    @yield('custom')
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Ranna | Home 2</title>
@@ -28,6 +29,7 @@
     <link rel="stylesheet" href="/style.css">
     <!-- Modernizr Js -->
     <script src="/js/modernizr-3.6.0.min.js"></script>
+
 </head>
 
 <body>
@@ -58,27 +60,20 @@
                         </div>
                         <nav class="site-nav">
                             <ul id="site-menu" class="site-menu">
-                                <li><a href="#">Home</a>
+                                <li><a href="/">Home</a>
 
                                 </li>
+
                                 <li>
-                                    <a href="category.blade.php">Category</a>
-                                </li>
-                                <li>
-                                    <a href="#">Recipes</a>
+                                    <a href="">Recipes</a>
                                     <ul class="dropdown-menu-col-1">
                                         <li>
-                                            <a href="recipe-with-sidebar.html">Recipes With Sidebar</a>
+                                            <a href="/all-recipes">All Recipes</a>
                                         </li>
                                         <li>
-                                            <a href="recipes-by-category.blade.php">Recipes Without Sidebar</a>
+                                            <a href="/category">Recipes By Category</a>
                                         </li>
-                                        <li>
-                                            <a href="single-recipe.blade.php">Single Recipe 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-recipe.blade.php">Single Recipe 2</a>
-                                        </li>
+
                                     </ul>
                                 </li>
                                 <li class="possition-static hide-on-mobile-menu">
@@ -101,7 +96,7 @@
                                                     <div class="menu-ctg-title">Recipes</div>
                                                     <ul class="sub-menu">
                                                         <li>
-                                                            <a href="recipe-with-sidebar.html"><i class="fas fa-utensils"></i>Recipes
+                                                            <a href="all-recipes.blade.php"><i class="fas fa-utensils"></i>Recipes
                                                                 With Sidebar</a>
                                                         </li>
                                                         <li>
@@ -139,11 +134,11 @@
                                                 <div class="col-4">
                                                     <ul class="sub-menu">
                                                         <li>
-                                                            <a href="submit-recipe.html"><i class="far fa-share-square"></i>Submit
+                                                            <a href="auth/submit-recipe"><i class="far fa-share-square"></i>Submita
                                                                 Recipe</a>
                                                         </li>
                                                         <li>
-                                                            <a href="login.html"><i class="fas fa-lock"></i>Login</a>
+                                                            <a href="login.blade.php"><i class="fas fa-lock"></i>Login</a>
                                                         </li>
                                                         <li>
                                                             <a href="404.html"><i class="fas fa-exclamation-triangle"></i>404
@@ -178,13 +173,13 @@
                                             <a href="single-author.html">Author Details</a>
                                         </li>
                                         <li>
-                                            <a href="submit-recipe.html">Submit Recipe</a>
+                                            <a href="auth/submit-recipe">Submit Recipe</a>
                                         </li>
                                         <li>
-                                            <a href="login.html">Login</a>
+                                            <a href="login.blade.php">Login</a>
                                         </li>
                                         <li>
-                                            <a href="login.html">404 Error</a>
+                                            <a href="login.blade.php">404 Error</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -289,7 +284,7 @@
                                     </button>
                                 </li>
                                 <li>
-                                    <a href="submit-recipe.html" class="fill-btn"><i class="flaticon-plus-1"></i>SUBMIT
+                                    <a href="/submit-recipe" class="fill-btn"><i class="flaticon-plus-1"></i>SUBMIT
                                         RECIPE</a>
                                 </li>
                             </ul>
@@ -461,19 +456,34 @@
             <div class="modal-body">
                 <form class="login-form" method="POST" action="{{ route('login')}}">
                     @csrf
-                    <input id="username" type="text" class="main-input-box">
+                    <input id="email" placeholder="Email Adress" type="email" class="form-control main-input-box @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                    @error('email')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
 
-                        <input id="password" type="password" class="main-input-box">
+
+                    <input id="password" placeholder="Password"  type="password" class="form-control main-input-box @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" >
+
+                    @error('password')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
+
                     <div class="inline-box mb-5 mt-4">
                         <div class="checkbox checkbox-primary">
-                            <input id="modal-checkbox" type="checkbox">
-                            <label for="modal-checkbox">Remember Me</label>
+                            <input class="form-check-input" type="checkbox" name="remember" id="remember2" {{ old('remember') ? 'checked' : '' }}>
+                            <label for="remember2" for="remember">
+                                Remember Me</label>
                         </div>
-                        <label class="lost-password"><a href="#">Lost your password?</a></label>
+
+                        <label class="lost-password"><a href="{{ route('password.request') }}">Lost your password?</a></label>
                     </div>
                     <div class="inline-box mb-5 mt-4">
                         <button class="btn-fill" type="submit" value="Login">Login</button>
-                        <a href="#" class="btn-register"><i class="fas fa-user"></i>Register Here!</a>
+                        <a href="/register" class="btn-register"><i class="fas fa-user"></i>Register Here!</a>
                     </div>
                     @endguest
                     @auth()

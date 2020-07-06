@@ -4,11 +4,24 @@ namespace App\Http\Controllers;
 
 use DB;
 use App\Models\Recipe;
+use App\Models\Category;
 use App\Models\Recipepart;
 use Illuminate\Http\Request;
 
 class RecipeController extends Controller
 {
+
+
+
+
+    public function category()
+    {
+        return view('category', [
+            'categories' =>  Category::all()
+        ]);
+    }
+
+
 
 
     public function show($categoryid)
@@ -43,8 +56,12 @@ class RecipeController extends Controller
 
     }
 
+    public function allRecipes()
+    {
+        return view('all-recipes', [
+            'recipes' =>  Recipe::all()
 
-
-
+        ]);
+    }
 
 }

@@ -204,7 +204,7 @@
                             <figure class="item-figure"><a href="/single-recipe/{{$recipe->id}}"><img src="/img/product/product38.jpg"
                                         alt="Product"></a></figure>
                             <div class="item-content">
-
+                                <span class="sub-title">{{$recipe->category['name']}}</span>
                                 <h3 class="item-title"><a href="/single-recipe/{{$recipe->id}}">{{$recipe->name}}</a></h3>
                                 <ul class="item-rating">
                                     <li class="star-fill"><i class="fas fa-star"></i></li>

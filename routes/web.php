@@ -13,23 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+// Home has to be cleaned up *
 Route::get('/', function () {
     return view('index');
 });
 
 
-Route::get('/category', function () {
-
-
-    return view('category', [
-        'categories' =>  App\Models\Category::all()
-    ]);
-});
-
+// Everything to do with recipes
+Route::get('/all-recipes', 'RecipeController@allRecipes');
+Route::get('/category', 'RecipeController@category');
 Route::get('/recipes-by-category/{categoryid}', 'RecipeController@show');
 Route::get('/single-recipe/{recipeid}', 'RecipeController@singleRecipe');
 
 Auth::routes();
 
 
-Route::get('/', 'HomeController@show')->name('home');
+Route::get('/submit-recipe', 'RestrictionController@form');
+Route::post('/submit-recipe', 'RestrictionController@post');
+
+

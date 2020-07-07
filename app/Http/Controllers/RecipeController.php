@@ -26,6 +26,7 @@ class RecipeController extends Controller
 
     public function show($categoryid)
     {
+
        $recipes = Recipe::where('category_id', '=' , $categoryid )->get();
 
        return view('recipes-by-category', ['recipes' => $recipes]);
@@ -41,7 +42,6 @@ class RecipeController extends Controller
         $steps = Recipe::getSteps($recipeid);
 
         $parts = Recipe::getParts($recipeid);
-
 
 
 

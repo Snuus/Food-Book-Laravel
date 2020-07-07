@@ -20,32 +20,32 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-	protected $table = 'user';
-	public $timestamps = false;
+    protected $table = 'user';
+    public $timestamps = false;
 
-	protected $casts = [
-		'role_id' => 'int'
-	];
+    protected $casts = [
+        'role_id' => 'int'
+    ];
 
-	protected $hidden = [
+    protected $hidden = [
         'password', 'remember_token'
-	];
+    ];
 
-	protected $fillable = [
-		'username',
-		'password',
-		'first_name',
-		'last_name',
-		'email',
-	];
+    protected $fillable = [
+        'username',
+        'password',
+        'first_name',
+        'last_name',
+        'email',
+    ];
 
-	public function role()
-	{
-		return $this->belongsTo(Role::class);
-	}
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
 
-	public function recipes()
-	{
-		return $this->hasMany(Recipe::class);
-	}
+    public function recipes()
+    {
+        return $this->hasMany(Recipe::class);
+    }
 }

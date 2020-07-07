@@ -5,8 +5,9 @@
  */
 
 namespace App\Models;
+
 use DB;
-use App\models\Category;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,7 +19,12 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $body
  * @property int $user_id
  * @property int $category_id
- * @property bool $public
+ * @property bool|null $public
+ * @property int $serving
+ * @property Carbon $cookingtime
+ * @property Carbon $preparetime
+ * @property Carbon|null $created_at
+ * @property string $images
  *
  * @property User $user
  * @property Category $category
@@ -34,7 +40,13 @@ class Recipe extends Model
 	protected $casts = [
 		'user_id' => 'int',
 		'category_id' => 'int',
-       // 'public' => 'bool'
+		'public' => 'bool',
+		'serving' => 'int'
+	];
+
+	protected $dates = [
+		'cookingtime',
+		'preparetime'
 	];
 
 	protected $fillable = [
@@ -42,11 +54,14 @@ class Recipe extends Model
 		'body',
 		'user_id',
 		'category_id',
-	//	'public'
+		'public',
+		'serving',
+		'cookingtime',
+		'preparetime',
+        'images'
 	];
 
-
-    public function user()
+	public function user()
 	{
 		return $this->belongsTo(User::class);
 	}
@@ -61,16 +76,17 @@ class Recipe extends Model
 		return $this->hasMany(RecipeRecipepart::class);
 	}
 
-	public static function  getSteps($recipeid)
+
+    public static function  getSteps($recipeid)
     {
 
         return DB::table('steps')
-        ->select('steps.stepnumber','steps.title','steps.Detail','steps.recipepart_id')
-        ->leftJoin('recipepart', 'recipepart.id', '=', 'steps.recipepart_id')
-        ->leftJoin('recipe_recipepart', 'recipe_recipepart.recipepart_id', '=', 'steps.recipepart_id')
-        ->leftJoin('recipe', 'recipe.id', '=', 'recipe_recipepart.recipe_id')
-        ->where('recipe.id', $recipeid)
-        ->get();
+            ->select('steps.stepnumber','steps.title','steps.Detail','steps.recipepart_id')
+            ->leftJoin('recipepart', 'recipepart.id', '=', 'steps.recipepart_id')
+            ->leftJoin('recipe_recipepart', 'recipe_recipepart.recipepart_id', '=', 'steps.recipepart_id')
+            ->leftJoin('recipe', 'recipe.id', '=', 'recipe_recipepart.recipe_id')
+            ->where('recipe.id', $recipeid)
+            ->get();
 
     }
 
@@ -86,5 +102,5 @@ class Recipe extends Model
 
     }
 
-}
 
+}

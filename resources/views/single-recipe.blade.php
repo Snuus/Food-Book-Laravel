@@ -29,21 +29,11 @@
                 data-r-small-dots="false" data-r-medium="1" data-r-medium-nav="true" data-r-medium-dots="false"
                 data-r-large="1" data-r-large-nav="true" data-r-large-dots="false" data-r-extra-large="1"
                 data-r-extra-large-nav="true" data-r-extra-large-dots="false">
+
                 <div class="item-figure">
-                    <img src="/img/figure/single-banner1.jpg" alt="Banner">
+                    <img src="/{{$recipe->images}}" alt="Banner">
                 </div>
-                <div class="item-figure">
-                    <img src="/img/figure/single-banner2.jpg" alt="Banner">
-                </div>
-                <div class="item-figure">
-                    <img src="/img/figure/single-banner3.jpg" alt="Banner">
-                </div>
-                <div class="item-figure">
-                    <img src="/img/figure/single-banner4.jpg" alt="Banner">
-                </div>
-                <div class="item-figure">
-                    <img src="/img/figure/single-banner5.jpg" alt="Banner">
-                </div>
+
             </div>
         </section>
         <!-- Single Recipe Main Banner Area End Here -->
@@ -55,10 +45,8 @@
                     <h2 class="item-title">{{$recipe->name}}</h2>
                     <div class="d-flex align-items-center justify-content-between flex-wrap mb-5">
                         <ul class="entry-meta">
-                            <li class="single-meta"><a href="#"><i class="far fa-calendar-alt"></i>Nov 14,
-                                    2018</a></li>
-                            <li class="single-meta"><a href="#"><i class="fas fa-user"></i>by <span>Kazi
-                                        Fahim</span></a></li>
+                            <li class="single-meta"><a href="#"><i class="far fa-calendar-alt"></i>{{$recipe->created_at}}</a></li>
+                            <li class="single-meta"><a href="#"><i class="fas fa-user"></i>by <span>{{$recipe->user['username']}}</span></a></li>
                             <li class="single-meta">
                                 <ul class="item-rating">
                                     <li class="star-fill"><i class="fas fa-star"></i></li>
@@ -97,7 +85,7 @@
                                         </div>
                                         <div class="media-body space-sm">
                                             <div class="feature-title">PREP TIME</div>
-                                            <div class="feature-sub-title">45 Mins</div>
+                                            <div class="feature-sub-title">{{ date('H:i:s', strtotime($recipe->preptime))}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -110,7 +98,7 @@
                                         </div>
                                         <div class="media-body space-sm">
                                             <div class="feature-title">COOK TIME</div>
-                                            <div class="feature-sub-title">45 Mins</div>
+                                            <div class="feature-sub-title">{{ date('H:i:s', strtotime($recipe->cooktime))}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -123,7 +111,7 @@
                                         </div>
                                         <div class="media-body space-sm">
                                             <div class="feature-title">SERVING</div>
-                                            <div class="feature-sub-title">10 People</div>
+                                            <div class="feature-sub-title">{{$recipe->serving}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -143,12 +131,7 @@
                             </li>
                         </ul>
                     </div>
-                    <p class="item-description">More off this less hello salamander lied porpoise much over tightly
-                        circa horse taped so innocuously side crudey mightily rigorous plot life. New homes in
-                        particular are subject.All recipes created with FoodiePress have suport for Micoformats and
-                        Google Recipe View. Schema.org is a collaboration byo improve the web by creatinegaera
-                        structured data markup.More off this less hello salamander lied porpoise much over tightly
-                        circa horse tapedey innocuously.</p>
+                    <p class="item-description">{!! $recipe->body !!}</p>
                     <div class="making-elements-wrap">
                         <div class="row">
                             <div class="col-xl-6 col-12">

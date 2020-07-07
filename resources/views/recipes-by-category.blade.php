@@ -217,7 +217,7 @@
                                 <p>{{ $recipe->body  }} </p>
                                 <ul class="entry-meta">
                                     <li><a href="#"><i class="fas fa-clock"></i>15 Mins</a></li>
-                                    <li><a href="#"><i class="fas fa-user"></i>by <span>John Martin</span></a></li>
+                                    <li><a href="#"><i class="fas fa-user"></i>by <span>{{$recipe->user['username']}}</span></a></li>
                                     <li><a href="#"><i class="fas fa-heart"></i><span>02</span> Likes</a></li>
                                 </ul>
                             </div>

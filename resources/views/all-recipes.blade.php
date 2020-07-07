@@ -199,7 +199,7 @@
                             @foreach ($recipes as $recipe)
                             <div class="col-md-3 col-12">
                                 <div class="product-box-layout1">
-                                    <figure class="item-figure"><a href="single-recipe.blade.php"><img src="img/product/product50.jpg"
+                                    <figure class="item-figure"><a href="single-recipe.blade.php"><img src="{{$recipe->images}}"
 
                                                                                                        alt="Product"></a></figure>
                                     <div class="item-content">

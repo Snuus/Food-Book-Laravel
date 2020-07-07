@@ -201,7 +201,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
 
                         <div class="product-box-layout1">
-                            <figure class="item-figure"><a href="/single-recipe/{{$recipe->id}}"><img src="/img/product/product38.jpg"
+                            <figure class="item-figure"><a href="/single-recipe/{{$recipe->id}}"><img src="/{{$recipe->images}}"
                                         alt="Product"></a></figure>
                             <div class="item-content">
                                 <span class="sub-title">{{$recipe->category['name']}}</span>

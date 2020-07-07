@@ -214,186 +214,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="related-recipe">
-                        <h4 class="heading-title">FROM OUR SHOP</h4>
-                        <div class="rc-carousel nav-control-layout3" data-loop="true" data-items="5" data-margin="40"
-                            data-autoplay="true" data-autoplay-timeout="5000" data-smart-speed="700" data-dots="false"
-                            data-nav="true" data-nav-speed="false" data-r-x-small="1" data-r-x-small-nav="true"
-                            data-r-x-small-dots="false" data-r-x-medium="1" data-r-x-medium-nav="true"
-                            data-r-x-medium-dots="false" data-r-small="2" data-r-small-nav="true" data-r-small-dots="false"
-                            data-r-medium="2" data-r-medium-nav="true" data-r-medium-dots="false" data-r-large="3"
-                            data-r-large-nav="true" data-r-large-dots="false" data-r-extra-large="3"
-                            data-r-extra-large-nav="true" data-r-extra-large-dots="false">
-                            <div class="shop-box-layout1">
-                                <div class="mask-item bg--light">
-                                    <div class="item-figure">
-                                        <img src="img/product/shop-figure1.png" alt="Product">
-                                    </div>
-                                    <ul class="action-items">
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-exchange-alt"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="item-content">
-                                    <h3 class="item-title"><a href="single-shop.html">Kitchen Utensils</a></h3>
-                                    <div class="item-price"><span class="currency">$</span>28.00</div>
-                                </div>
-                            </div>
-                            <div class="shop-box-layout1">
-                                <div class="mask-item bg--light">
-                                    <div class="item-figure">
-                                        <img src="img/product/shop-figure2.png" alt="Product">
-                                    </div>
-                                    <ul class="action-items">
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-exchange-alt"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="item-content">
-                                    <h3 class="item-title"><a href="single-shop.html">Kitchen Utensils</a></h3>
-                                    <div class="item-price"><span class="currency">$</span>28.00</div>
-                                </div>
-                            </div>
-                            <div class="shop-box-layout1">
-                                <div class="mask-item bg--light">
-                                    <div class="item-figure">
-                                        <img src="img/product/shop-figure3.png" alt="Product">
-                                    </div>
-                                    <ul class="action-items">
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-exchange-alt"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="item-content">
-                                    <h3 class="item-title"><a href="single-shop.html">Kitchen Utensils</a></h3>
-                                    <div class="item-price"><span class="currency">$</span>28.00</div>
-                                </div>
-                            </div>
-                            <div class="shop-box-layout1">
-                                <div class="mask-item bg--light">
-                                    <div class="item-figure">
-                                        <img src="img/product/shop-figure4.png" alt="Product">
-                                    </div>
-                                    <ul class="action-items">
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-exchange-alt"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="item-content">
-                                    <h3 class="item-title"><a href="single-shop.html">Kitchen Utensils</a></h3>
-                                    <div class="item-price"><span class="currency">$</span>28.00</div>
-                                </div>
-                            </div>
-                            <div class="shop-box-layout1">
-                                <div class="mask-item bg--light">
-                                    <div class="item-figure">
-                                        <img src="img/product/shop-figure5.png" alt="Product">
-                                    </div>
-                                    <ul class="action-items">
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-exchange-alt"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="item-content">
-                                    <h3 class="item-title"><a href="single-shop.html">Kitchen Utensils</a></h3>
-                                    <div class="item-price"><span class="currency">$</span>28.00</div>
-                                </div>
-                            </div>
-                            <div class="shop-box-layout1">
-                                <div class="mask-item bg--light">
-                                    <div class="item-figure">
-                                        <img src="img/product/shop-figure6.png" alt="Product">
-                                    </div>
-                                    <ul class="action-items">
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-exchange-alt"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="item-content">
-                                    <h3 class="item-title"><a href="single-shop.html">Kitchen Utensils</a></h3>
-                                    <div class="item-price"><span class="currency">$</span>28.00</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
 
                     @foreach( $parts as $part)
                     <div class="direction-wrap-layout2">
@@ -479,47 +300,47 @@
                         <div class="media media-none--xs">
                             <img src="img/blog/author9.jpg" alt="Blog Author" class="rounded-circle media-img-auto">
                             <div class="media-body">
-                                <h4 class="author-title">Michel Jack</h4>
+                                <h4 class="author-title">{{$recipe->user['first_name']}} {{$recipe->user['last_name']}}</h4>
                                 <h5 class="author-sub-title">Written by</h5>
                                 <p>I love cooking and blogging. Using a fork, break salmon. Halve reserved
                                     potatoes and eggs crosswise. The of something of did require met of
                                     help have someone.</p>
-                                <ul class="author-social">
-                                    <li>
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-skype"></i></a>
-                                    </li>
-                                </ul>
+{{--                                <ul class="author-social">--}}
+{{--                                    <li>--}}
+{{--                                        <a href="#"><i class="fab fa-facebook-f"></i></a>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <a href="#"><i class="fab fa-twitter"></i></a>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <a href="#"><i class="fab fa-skype"></i></a>--}}
+{{--                                    </li>--}}
+{{--                                </ul>--}}
                             </div>
                         </div>
                     </div>
-                    <div class="next-prev-post">
-                        <div class="prev-post">
-                            <a href="#" class="item-figure"><img src="img/blog/prev-post.jpg" alt="Post"></a>
-                            <div class="item-content">
-                                <p>PREVIOUS POST</p>
-                                <h3 class="post-title"><a href="#">Old school pancake next area so goody</a></h3>
-                            </div>
-                        </div>
-                        <div class="next-post">
-                            <div class="item-content">
-                                <p>NEXT POST</p>
-                                <h3 class="post-title"><a href="#">Old school pancake next area so goody</a></h3>
-                            </div>
-                            <a href="#" class="item-figure"><img src="img/blog/next-post.jpg" alt="Post"></a>
-                        </div>
-                    </div>
+{{--                    <div class="next-prev-post">--}}
+{{--                        <div class="prev-post">--}}
+{{--                            <a href="#" class="item-figure"><img src="img/blog/prev-post.jpg" alt="Post"></a>--}}
+{{--                            <div class="item-content">--}}
+{{--                                <p>PREVIOUS POST</p>--}}
+{{--                                <h3 class="post-title"><a href="#">Old school pancake next area so goody</a></h3>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="next-post">--}}
+{{--                            <div class="item-content">--}}
+{{--                                <p>NEXT POST</p>--}}
+{{--                                <h3 class="post-title"><a href="#">Old school pancake next area so goody</a></h3>--}}
+{{--                            </div>--}}
+{{--                            <a href="#" class="item-figure"><img src="img/blog/next-post.jpg" alt="Post"></a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                     <div class="recipe-reviews">
                         <div class="section-heading3 heading-dark">
                             <h2 class="item-heading">RECIPE REVIEWS</h2>

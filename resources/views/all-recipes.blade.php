@@ -213,7 +213,7 @@
                                             <li class="star-empty"><i class="fas fa-star"></i></li>
                                             <li><span>9<span> / 10</span></span> </li>
                                         </ul>
-                                        <p>{{$recipe->body}}</p>
+                                        <p>{{Str::limit($recipe->body, 250)  }}</p>
                                         <ul class="entry-meta">
                                             <li><a href="#"><i class="fas fa-clock"></i>15 Mins</a></li>
                                             <li><a href="#"><i class="fas fa-user"></i>by <span>{{$recipe->user['username']}}</span></a></li>

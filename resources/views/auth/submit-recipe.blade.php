@@ -139,13 +139,10 @@
                                         <div class="form-group additional-input-box icon-left">
                                             <i class="fas fa-arrows-alt"></i>
                                             <input type="text" placeholder="Part Name" class="form-control"
-                                                   name="partname[]" id="partname">
-                                        </div> <div class="form-group">
-                                            <input type="text" placeholder="Part Name" class="form-control"
-                                                   name="partname[]" id="partname">
+                                                   name="partname" id="partname">
                                         </div> <div class="form-group">
                                         <textarea placeholder="Type your text" class="textarea form-control" name="parttext" id="form-message parttext"
-                                                  rows="7" cols="20" data-error="Message field is required" requiredn></textarea>
+                                                  rows="7" cols="20" data-error="Message field is required" required n></textarea>
                                         </div>
 
 
@@ -173,32 +170,6 @@
                                 </div>
                                 <button type="submit" class="btn-upload"><i class="flaticon-add-plus-button"></i>create new part and steps</button>
                             </div>
-
-
-                            <label class="col-12">Steps:</label>
-                            <div class="col-6">
-                                <div class="form-group additional-input-box icon-left">
-                                    <i class="fas fa-arrows-alt"></i>
-                                    <input type="text" placeholder="Stepnumber" class="form-control"
-                                           name="stepnumber" id="stepnumber">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group additional-input-box icon-right">
-                                    <input type="text" placeholder="Step title" class="form-control"
-                                           name="steptitle" id="steptitle">
-                                    <i class="fas fa-times"></i>
-
-                                </div>
-                            </div>
-                            <div class="form-group col-12">
-                                        <textarea placeholder="Type your text" class="textarea form-control" name="stepdetail" id="form-message stepdetail"
-                                                  rows="7" cols="20" data-error="Message field is required" required ></textarea>
-                            </div>
-                    </div>
-                    <button type="submit" class="btn-upload"><i class="flaticon-add-plus-button"></i>create new part and steps</button>
-                </div>
-
 
                             <div class="additional-input-wrap">
                                 <label>Ingredients:</label>

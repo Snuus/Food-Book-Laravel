@@ -12,12 +12,12 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Recipepart
- * 
+ *
  * @property int $id
  * @property string $name
  * @property Carbon $duration
  * @property string $text
- * 
+ *
  * @property Collection|Recipe[] $recipes
  * @property Collection|Ingredient[] $ingredients
  * @property Collection|Quantity[] $quantities
